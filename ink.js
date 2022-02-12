@@ -28,18 +28,22 @@ function getRandomArbitrary(min, max) {
   }
 attackp1 = ()=>{
     if(chstart == true && chmove == false){
+        document.getElementById('attackp1').style.display = "none";
+        document.getElementById('attackp2').style.display = "block";
     attack = getRandomArbitrary(0,5);
     healthp2 = healthp2 - attack
     console.log(healthp2)
     console.log("attack = "+ attack)
-    updateh1()
     chmove=true;
+    updateh1()
     }else{
         alert("Player 2nd chance or click on 'Start' button");
     }
 }
 attackp2 = ()=>{
     if(chstart == true && chmove == true){
+        document.getElementById('attackp2').style.display = "none";
+        document.getElementById('attackp1').style.display = "block";
     attack = getRandomArbitrary(0,5);
     healthp1= healthp1 - attack
     console.log(healthp1)
@@ -52,22 +56,47 @@ attackp2 = ()=>{
 }
 
 updateh1 = () =>{
+    if(healthp2<=70){
+        document.getElementById('uph2').style.color = "green"
+    }
+    else if(healthp2<=40){
+        document.getElementById('uph2').style.color = 'blue'
+    }
+    else if(healthp2<=10){
+        document.getElementById('uph2').style.color = 'red'
+    }
+    else{
+        document.getElementById('uph2').style.color = "black"
+    }
     document.getElementById('uph2').textContent = healthp2;
     if(healthp2 <= 0 || healthp1 <= 0){
         healthd();
     }
 }
 updateh2 = () =>{
+    if(healthp1<=70){
+        document.getElementById('uph1').style.color = "green"
+    }
+    else if(healthp1<=40){
+        document.getElementById('uph1').style.color = 'blue'
+    }
+    else if(healthp1<=10){
+        document.getElementById('uph1').style.color = 'red'
+    }
+    else{
+        document.getElementById('uph1').style.color = "black"
+    }
     document.getElementById('uph1').textContent = healthp1;
     if(healthp1 <= 0 || healthp2 <=0){
         healthd();
     }
 }
-healathd = () => {
+healthd = () => {
     tmatch = tmatch+1;
     healthp1 = 100;
     healthp2 = 100;
     updateh1()
+    console.log(healthp1)
     updateh2()
     checkwin()
     alert("Match " + tmatch+ " completed.")
@@ -81,7 +110,6 @@ pause =()=>{
 reset = () =>{
  healthp1 = 100
  healthp2 = 100
- attack =0
  pointp1 = 0
  pointp2 = 0
  tmatch = 0
@@ -102,10 +130,12 @@ winner=()=>{
     }
 }
 checkwin = () =>{
-    if(healthp1<healthp2){
+    if(healthp1>healthp2){
         pointp1= pointp1+1
+        document.getElementById('plr1p').textContent = pointp1
     }
     else{
         pointp2 = pointp2 +1
+        document.getElementById('plr2p').textContent = pointp2
     }
 }
