@@ -56,13 +56,13 @@ attackp2 = ()=>{
 }
 
 updateh1 = () =>{
-    if(healthp2<=70){
+    if(healthp2<=70 && healthp2>15){
         document.getElementById('uph2').style.color = "green"
     }
-    else if(healthp2<=40){
+    else if(healthp2<=40 && healthp2>15){
         document.getElementById('uph2').style.color = 'blue'
     }
-    else if(healthp2<=10){
+    else if(healthp2<=15){
         document.getElementById('uph2').style.color = 'red'
     }
     else{
@@ -74,13 +74,13 @@ updateh1 = () =>{
     }
 }
 updateh2 = () =>{
-    if(healthp1<=70){
+    if(healthp1<=70 && healthp1>40){
         document.getElementById('uph1').style.color = "green"
     }
-    else if(healthp1<=40){
+    else if(healthp1<=40 && healthp1>15){
         document.getElementById('uph1').style.color = 'blue'
     }
-    else if(healthp1<=10){
+    else if(healthp1<=15){
         document.getElementById('uph1').style.color = 'red'
     }
     else{
