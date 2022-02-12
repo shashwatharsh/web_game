@@ -56,7 +56,7 @@ attackp2 = ()=>{
 }
 
 updateh1 = () =>{
-    if(healthp2<=70 && healthp2>15){
+    if(healthp2<=70 && healthp2>40){
         document.getElementById('uph2').style.color = "green"
     }
     else if(healthp2<=40 && healthp2>15){
