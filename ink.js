@@ -92,17 +92,18 @@ updateh2 = () =>{
     }
 }
 healthd = () => {
+
     tmatch = tmatch+1;
-    healthp1 = 100;
-    healthp2 = 100;
-    updateh1()
-    console.log(healthp1)
-    updateh2()
     checkwin()
     alert("Match " + tmatch+ " completed.")
     if(tmatch>5){
         winner()
     }
+    healthp1 = 100;
+    healthp2 = 100;
+    updateh1()
+    console.log(healthp1)
+    updateh2()
 }
 pause =()=>{
     alert("Game Paused!, click Ok to continue. ")
@@ -134,7 +135,13 @@ checkwin = () =>{
         pointp1= pointp1+1
         document.getElementById('plr1p').textContent = pointp1
     }
-    else{
+    else if(healthp1<healthp2){
+        pointp2 = pointp2 +1
+        document.getElementById('plr2p').textContent = pointp2
+    }
+    else if(healthp1==healthp2){
+        pointp1= pointp1+1
+        document.getElementById('plr1p').textContent = pointp1
         pointp2 = pointp2 +1
         document.getElementById('plr2p').textContent = pointp2
     }
