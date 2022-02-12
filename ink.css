@@ -1,0 +1,84 @@
+* {
+  margin: 0px;
+}
+.heading {
+  color: red;
+  font-size: 45px;
+}
+header {
+  background: blue;
+  display: flex;
+  flex-direction: row;
+  align-content: space-around;
+  justify-content: center;
+  height: 60px;
+}
+.lifelevel{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 45px;
+}
+.attack{
+    display: flex;
+    justify-content: space-evenly;
+}
+.btnattack{
+    height: 56px;
+    width: 106px;
+    background: darksalmon;
+    border: solid #27d76d 2px;
+    font-size: 24px;
+    border-radius: 6px;
+}
+.match{
+    display: flex;
+    justify-content: center;
+    margin-top: 51px;
+}
+.box{
+    display: flex;
+    border: solid black 5px;
+    border-radius: 8px;
+}
+#current{
+    margin-left: 15px;
+}
+.outof{
+    margin-right: 15px;
+}
+.playern{
+    display: flex;
+    justify-content: space-around;
+    margin: 49px;
+}
+.lp{
+    display: flex;
+}
+.btngame{
+    height: 44px;
+    width: 154px;
+    font-size: larger;
+    border-radius: 10px;
+}
+.btnstart{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 58px;
+}
+h2.pointt {
+    margin: 19px;
+}
+.points {
+    display: flex;
+    flex-direction: row;
+    /* margin: auto; */
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+    background: silver;
+}
+.cont {
+    display: flex;
+    flex-direction: column;
+}

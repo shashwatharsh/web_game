@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shooting_Game</title>
+  <link rel="stylesheet" href="ink.css">
+</head>
+<body>
+  <header>
+    <div class="heading">
+      Shooting Game 
+    </div>
+    </header>
+  <div class="content">
+      <div class="playern">
+          <h1 class="pl">Player 1</h1>
+          <h1 class="pl">Player 2</h1>
+      </div>
+    <div class="lifelevel">
+        <div class="lp"><h3>Health = </h3>
+            <h3 id="uph1">100</h3>
+        </div>
+        <div class="lp"><h3>Health = </h3>
+            <h3 id="uph2">100</h3></div>
+    </div>
+    <div class="attack">
+        <div id="attackp1"> <button class="btnattack" onclick="attackp1()"> Attack </button></div>
+        <div id="attackp2"><button class="btnattack" onclick="attackp2()"> Attack </button></div>
+    </div>
+    <div class="match">
+        <div class="box">
+        <h1 id="current">0</h1>
+        <h1 class="outof">/5</h1>
+    </div>
+    </div>
+    <div class="btnstart">
+        <button id="start" class="btngame startg" onclick="gamstart()">Start Game</button>
+        <button id="pause" class="btngame pauseg" onclick="pause()">Pause </button>
+        <button id="reset" class="btngame resetg" onclick="reset()">Reset</button>
+      
+    </div>
+    <div class="points">
+        <h2 class="pointt">Points</h2>
+            <div class="cont">
+                <div class="plyr"><h3>Player 1 </h3><h3 id="plr1p">0</h3> </div>
+                <div class="plyr"><h3>Player 1 </h3><h3 id="plr2p">0</h3> </div>
+        </div>
+    </div>
+  </div>
+  <script src="ink.js"></script>
+</body>
+</html>
